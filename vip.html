@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/png" href="Resimler/qt=q_95.webp">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>VİP - CraftLord Minecraft Sunucusu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background: #ff9800;
+            border-radius: 5px;
+        }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+        .menu {
+            display: flex;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            margin-top: 80px; /* Navbar yüksekliği kadar boşluk bırak */
+        }
+        .product-header {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .product-header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #ff5722; /* Başlık rengi */
+        }
+        .product-header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .product-info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .product-info img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        .product-details {
+            max-width: 500px;
+            text-align: left;
+        }
+        .price {
+            font-size: 1.5rem;
+            color: #ff5722; /* Fiyat rengi */
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.8);
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+            .menu.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="font-roboto bg-gray-100">
+    <header class="navbar">
+        <div><strong>Craftlord</strong></div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="menu" id="menu">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="sunucubilgileri.html">Sunucu Bilgileri</a>
+            <a href="hakkımızda.html">Hakkımızda</a>
+            <a href="market.html">Market</a>
+            <a href="lordcoin.html">LordCoin</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="product-header">
+            <h1>VIP Üyelik</h1>
+            <p>Özel avantajlar ve ayrıcalıklar ile dolu bir minecraft deneyimi.</p>
+        </div>
+
+        <div class="product-info">
+            <div class="product-details">
+                <strong><h2>Ürün Detayları:</h2></strong>
+                <p>VIP Süresi: <strong>1 Ay</strong></p>
+                <p><strong>Özellikler:</strong></p>
+                <ul>
+                    <li>Özel alanlar ve etkinlikler</li>
+                    <li>Hızlı destek hizmeti</li>
+                    <li>Özel skin ve eşyalar</li>
+                    <li>Ve daha fazlası!</li>
+                </ul>
+                <div class="price">Fiyat: 125₺</div>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=destek.craftlord45@gmail.com" target="_blank">
+                    <button class="button">Satın Almak İçin Bizimle İletişime Geç</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white-700 text-black py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Craftlord Minecraft Sunucusu. Tüm hakları saklıdır.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a class="hover:text-gray-300" href="https://www.instagram.com/craftlordnw" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="hover:text-gray-300" href="https://discord.com" target="_blank">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a class="hover:text-gray-300" href="https://t.me/craftlordnw" target="_blank">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

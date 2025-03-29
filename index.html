@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/png" href="Resimler/qt=q_95.webp">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="keywords" content="minecraft, minecraft sunucu,türk minecraft,minecraft türk sunucu,minecraft server,minecraft türk server,minecraft skyblock,skyblock,skyblock server,towny,towny server,minecraft towny server,minecraft skyblock server,minecraft towny,towny sunucusu,skyblock sunucusu,minecraft sunucusu">
+    <title>Anasayfa - CraftLord Minecraft Sunucusu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background: #ff9800;
+            border-radius: 5px;
+        }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+        .menu {
+            display: flex;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            background: url('https://cdn.pixabay.com/photo/2015/12/23/22/36/minecraft-1106252_1280.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(255, 87, 34, 0.3);
+        }
+        .announcement-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+        }
+        .announcement {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+        .announcement img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .active {
+            display: block;
+        }
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.8);
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+            .menu.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="font-roboto bg-gray-100">
+    <header class="navbar">
+        <div><strong>CraftLord</strong></div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="menu" id="menu">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="sunucubilgileri.html">Sunucu Bilgileri</a>
+            <a href="hakkımızda.html">Hakkımızda</a>
+            <a href="market.html">Market</a>
+            <a href="lordcoin.html">LordCoin</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>CraftLord Minecraft Sunucusuna Hoş Geldiniz</h1>
+            <a href="sunucubilgileri.html"><button class="button">Hemen Katıl</button></a>
+        </div>
+    </section>
+
+    <section class="container mx-auto py-12 px-6">
+        <h2 class="text-3xl font-bold text-center mb-8">
+            Sunucu Özellikleri
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img alt="Minecraft karakteri" class="mx-auto mb-4" height="100" src="https://image.api.playstation.com/vulcan/ap/rnd/202407/0401/670c294ded3baf4fa11068db2ec6758c63f7daeb266a35a1.png" width="100"/>
+                <h3 class="text-xl font-bold mb-2">Özellik 1</h3>
+                <p class="text-gray-700">
+                    Craftlord sunucusunda benzersiz oyun modları ve etkinlikler sizi bekliyor.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img alt="Minecraft karakteri" class="mx-auto mb-4" height="100" src="https://image.api.playstation.com/vulcan/ap/rnd/202407/0401/670c294ded3baf4fa11068db2ec6758c63f7daeb266a35a1.png" width="100"/>
+                <h3 class="text-xl font-bold mb-2">Özellik 2</h3>
+                <p class="text-gray-700">
+                    Güçlü sunucu altyapımız ile kesintisiz oyun keyfi.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img alt="Minecraft karakteri" class="mx-auto mb-4" height="100" src="https://image.api.playstation.com/vulcan/ap/rnd/202407/0401/670c294ded3baf4fa11068db2ec6758c63f7daeb266a35a1.png" width="100"/>
+                <h3 class="text-xl font-bold mb-2">Özellik 3</h3>
+                <p class="text-gray-700">
+                    Dost canlısı ve yardımsever topluluğumuz ile tanışın.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Duyurular Kısmı -->
+    <section class="bg-gray-200 py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">
+                Duyurular
+            </h2>
+            <div class="announcement-container">
+                <div class="announcement active">
+                    <img alt="Minecraft güncelleme haberi" class="w-full h-48 object-cover mb-4" src="https://storage.googleapis.com/a1aa/image/1bzepLfrEDvSQ0O2Jsyvm0DHXPZcfPaKouQPbUMsQaffSUAgC.jpg"/>
+                    <h3 class="text-xl font-bold mb-2">
+                        CraftLord Minecraft Sunucusu Çok Yakında Sizlerle!🎉
+                    </h3>
+                    <p class="text-gray-700">
+                      Sevgili oyuncular, Bakım sürecimiz sona erdi! 🎮✨ <br>
+                      Sunucumuz çok yakında açılıyor! <br>
+                      📅 Yeni IP bilgileri, açılış günü paylaşılacak. <br>
+                      Hazır olun, maceramız yeniden başlıyor! 🚀🌍
+                    </p>
+                </div>
+                <button class="nav-button prev" onclick="changeAnnouncement(-1)">&#10094;</button>
+                <button class="nav-button next" onclick="changeAnnouncement(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg--700 text-black py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>
+                © 2025 Craftlord Minecraft Sunucusu. Tüm hakları saklıdır.
+            </p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a class="hover:text-gray-300" href="https://www.instagram.com/craftlordnw" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="hover:text-gray-300" href="https://discord.com" target="_blank">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a class="hover:text-gray-300" href="https://t.me/craftlordnw" target="_blank">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const announcements = document.querySelectorAll('.announcement');
+
+        function showAnnouncement(index) {
+            announcements.forEach((announcement, i) => {
+                announcement.classList.remove('active');
+                if (i === index) {
+                    announcement.classList.add('active');
+                }
+            });
+        }
+
+        function changeAnnouncement(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = announcements.length - 1; // Sonuncuya git
+            } else if (currentIndex >= announcements.length) {
+                currentIndex = 0; // İlkine git
+            }
+            showAnnouncement(currentIndex);
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
